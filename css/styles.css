@@ -1,0 +1,182 @@
+.container {
+  position: relative;
+}
+
+.container,
+.left-content {
+  min-height: 100%;
+}
+
+.left-content {
+  display: inline-block;
+  width: 150px;
+  padding: 0 10px 10px;
+  background-color: rgba(191, 191, 191, 0.15);
+  box-shadow: -5px 0 14px -8px rgba(0, 0, 0, 0.25) inset;
+}
+
+.right-content {
+  position: absolute;
+  right: 0;
+  left: 180px;
+  top: 10px;
+  height: 100%;
+}
+
+sup {
+  font-size: 0.8em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.right-content .sub-title {
+  font-size: 120%;
+  color: rgba(152, 152, 152, 0.8);
+}
+
+.title-container {
+  min-height: 140px;
+  margin-bottom: 10px;
+}
+
+.title-container .exchange-name {
+  font-size: 240%;
+  font-weight: bold;
+  line-height: 34px;
+  margin-bottom: 10px;
+}
+
+.title-container > div:not(.flag) {
+  margin-left: 204px;
+}
+
+.stats {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.stats > div {
+  display: table-cell;
+  text-align: center;
+  border: 1px solid rgba(191, 191, 191, 0.25);
+  padding: 20px 0 25px;
+  width: 50%;
+}
+
+.stats > div:first-child,
+.stats > div:last-child {
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.stats .stat-value {
+  font-size: 200%;
+}
+
+#tabpanel {
+  margin-top: 10px;
+}
+
+#tabpanel .dx-multiview-wrapper {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+#tabpanel .tab-panel-title {
+  font-size: 180%;
+  font-weight: 500;
+}
+
+#tabpanel .dx-multiview-item-content {
+  padding: 20px 0 22px;
+  min-height: 400px;
+  position: relative;
+}
+
+#tabpanel .right-content {
+  top: 22px;
+  left: 2px;
+}
+
+#tabpanel .stats {
+  width: 100%;
+  margin-top: 6px;
+  border-top: 1px solid rgba(191, 191, 191, 0.25);
+}
+
+#tabpanel .stats > div {
+  padding: 7px 0;
+  text-align: left;
+  border: 0;
+}
+
+#tabpanel .stats > div:first-child {
+  width: 2%;
+}
+
+#tabpanel .stats > div:not(:first-child) {
+  width: 2%;
+}
+
+.flag {
+  width: 128px;
+  max-height: 128px;
+  float: left;
+  margin: 15px 0px 0px 25px;
+}
+.flagCoin {
+  width: 128px;
+  max-height: 128px;
+  float: left;
+  margin: 100px 36px 24px 50%;
+  opacity: 0.1;
+}
+
+#treeview .dx-treeview-node.dx-state-selected > .dx-item > .dx-item-content {
+  font-weight: 500px;
+}
+/*table*/
+div.networkTable {
+  
+  width: 100%;
+  text-align: center;
+  /*border-collapse: collapse;*/
+   margin-top: 6px;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.25);
+}
+
+/*#tabpanel.networkTable {
+  width: 100%;
+  margin-top: 6px;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.25);
+}*/
+.divTable.networkTable .divTableCell, .divTable.networkTable .divTableHead {
+  padding: 8px 0px;
+  border: 0.01px solid #3a3a3a45;
+}
+.divTable.networkTable .divTableRow:nth-child(even) {
+  background: #D0E4F5;
+}
+.divTable.networkTable .divTableHeading {
+ /* background: #282625;
+  background: -moz-linear-gradient(top, #5e5c5b 0%, #3d3b3a 66%, #282625 100%);
+  background: -webkit-linear-gradient(top, #5e5c5b 0%, #3d3b3a 66%, #282625 100%);
+  background: linear-gradient(to bottom, #5e5c5b 0%, #3d3b3a 66%, #282625 100%);*/
+}
+.divTable.networkTable .divTableHeading .divTableHead {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-top: 1px solid rgba(191, 191, 191, 0.25);
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}

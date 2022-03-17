@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>The Crypto Info</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.4/css/dx.common.css" />
+     <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.4/css/dx.dark.css" />
+    <script src="https://cdn3.devexpress.com/jslib/21.2.4/js/dx.all.js"></script>
+    <script src="https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/js/underscore.js"></script>
+    <script src="data/data.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/index.js"></script>
+  </head>
+  <body class="dx-viewport">
+    <div class="demo-container">
+      <div class="container">
+        <div class="left-content">
+          <div id="treeview"></div>
+        </div>
+        <div class="right-content">
+          <div class="title-container">
+            <img class="flag" id="exchange-flag" src="/" />
+            <div>
+              <div class="exchange-name" id="full-exchange-name"></div>
+              <div id="exchange-description"></div>
+            </div>
+          </div>
+
+          
+
+          <div class="sub-title">Coins</div>
+          
+          <div  id="tabpanel"> </div>
+        </div>
+      </div>
+
+      <script type="text/html" id="title">
+        <span class="tab-panel-title"><%= text %></span>
+      </script>
+
+      <script type="text/html" id="coins-template">
+        <div>
+          
+        <img class="flagCoin" src="<%= flag %>" />
+          <div class="right-content">
+            <div><b><%= (typeof capital != "undefined" && capital) ? "Capital. " : "" %></b><%= coins[0].text %> </div> 
+          <div class="divTable networkTable">
+              <div class="divTableHeading">
+              <div class="divTableRow">
+              <div class="divTableHead">Btc<br>(segwit)</div>
+              <div class="divTableHead">Btc<br>(lightning Network)</div>
+              <div class="divTableHead">Ethereum<br>(ERC20)</div>
+              <div class="divTableHead">Ethereum<br>(Arbitrum) </div>
+              <div class="divTableHead">Algorand </div>
+              <div class="divTableHead">Avalanche </div>
+              <div class="divTableHead">EOS </div>
+              <div class="divTableHead">Omni </div>
+              <div class="divTableHead">Polygon </div>
+              <div class="divTableHead">Solana</div>
+              <div class="divTableHead">Terra</div>
+              <div class="divTableHead">Tron</div>
+              <div class="divTableHead">Binance <br>Smart Chain</div>
+              <div class="divTableHead">Heco</div>
+              <div class="divTableHead">Okex</div>
+              </div>
+              </div>
+              <div class="divTableBody">
+              <div class="divTableRow">
+              <div class="divTableCell"><%= coins[0].segWit %></div>
+              <div class="divTableCell"><%= coins[0].lightningNetwork %></div>
+              <div class="divTableCell"><%= coins[0].ERC20 %></div>
+              <div class="divTableCell"><%= coins[0].arbitrum %></div>
+              <div class="divTableCell"><%= coins[0].algo %></div>
+              <div class="divTableCell"><%= coins[0].avax %></div>
+              <div class="divTableCell"><%= coins[0].eos %></div>
+              <div class="divTableCell"><%= coins[0].omni %></div>
+              <div class="divTableCell"><%= coins[0].matic %></div>
+              <div class="divTableCell"><%= coins[0].sol %></div>
+              <div class="divTableCell"><%= coins[0].luna %></div>
+              <div class="divTableCell"><%= coins[0].trx %></div>
+              <div class="divTableCell"><%= coins[0].bsc %></div>
+              <div class="divTableCell"><%= coins[0].huobi %></div>
+              <div class="divTableCell"><%= coins[0].okex %></div>
+              </div>
+              </div>
+            </div>
+              <br>
+            <div><b><%= (typeof capital != "undefined" && capital) ? "Capital. " : "" %></b><%= coins[1].text  %></div> 
+           <div class="divTable networkTable">
+              <div class="divTableHeading">
+              <div class="divTableRow">
+              <div class="divTableHead">Btc<br>(segwit)</div>
+              <div class="divTableHead">Btc<br>(lightning Network)</div>
+              <div class="divTableHead">Ethereum<br>(ERC20)</div>
+              <div class="divTableHead">Ethereum<br>(Arbitrum)</div>
+              <div class="divTableHead">Algorand</div>
+              <div class="divTableHead">Avalanche</div>
+              <div class="divTableHead">EOS</div>
+              <div class="divTableHead">Omni</div>
+              <div class="divTableHead">Polygon</div>
+              <div class="divTableHead">Solana</div>
+              <div class="divTableHead">Terra</div>
+              <div class="divTableHead">Tron</div>
+              <div class="divTableHead">Binance <br>Smart Chain</div>
+              <div class="divTableHead">Heco</div>
+              <div class="divTableHead">Okex</div>
+              </div>
+              </div>
+              <div class="divTableBody">
+              <div class="divTableRow">
+              <div class="divTableCell"><%= coins[1].segWit%></div>
+              <div class="divTableCell"><%= coins[1].lightningNetwork %></div>
+              <div class="divTableCell"><%= coins[1].ERC20 %></div>
+              <div class="divTableCell"><%= coins[1].arbitrum %></div>
+              <div class="divTableCell"><%= coins[1].algo %></div>
+              <div class="divTableCell"><%= coins[1].avax %></div>
+              <div class="divTableCell"><%= coins[1].eos %></div>
+              <div class="divTableCell"><%= coins[1].omni %></div>
+              <div class="divTableCell"><%= coins[1].matic %></div>
+              <div class="divTableCell"><%= coins[1].sol %></div>
+              <div class="divTableCell"><%= coins[1].luna %></div>
+              <div class="divTableCell"><%= coins[1].trx %></div>
+              <div class="divTableCell"><%= coins[1].bsc %></div>
+              <div class="divTableCell"><%= coins[1].huobi %></div>
+              <div class="divTableCell"><%= coins[1].okex %></div>
+              </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </script>
+    </div>
+  </body>
+</html>
