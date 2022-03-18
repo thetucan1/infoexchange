@@ -6,5 +6,5 @@
 
 -Soon we will include the movement of stable coins in the different chains.
 
-https://thecryptoinfo.github.io/web/ 
+https://thecryptoinfo.github.io/infoexchange/ 
 
