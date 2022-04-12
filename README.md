@@ -8,3 +8,10 @@
 
 https://thecryptoinfo.github.io/infoexchange/ 
 
+## Contribution
+
+If you find a bug or want to contribute to the code or documentation, you can help by submitting an [issue](https://github.com/thecryptoinfo/infoexchange/issues) or a [pull request](https://github.com/thecryptoinfo/infoexchange/pulls).
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
